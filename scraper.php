@@ -11,12 +11,12 @@ for($page = 300842;$page <= 300843; $page++)
 		$browser	=	file_get_html($link);
 		if($browser)
 		{
-			$nameofresult	=	$browser->find("//*[@id='item']/table[1]/tbody/tr/td/font/b",0);
-			$rollno 		=	$browser->find("//*[@id='item']/table[2]/tbody/tr[1]/td[2]",0);
-			$name 			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[3]/td[2]",0);
-			$fname			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[4]/td[2]",0);
-			$result			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[5]/td[2]",0);
-			$remarks		=	$browser->find("//*[@id='item']/table[2]/tbody/tr[6]/td[2]",0);
+			$nameofresult	=	$browser->find("//*[@id='item']/table[1]/tbody/tr/td/font/b",0)->plaintext;
+			$rollno 		=	$browser->find("//*[@id='item']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;
+			$name 			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[3]/td[2]",0)->plaintext;
+			$fname			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[4]/td[2]",0)->plaintext;
+			$result			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[5]/td[2]",0)->plaintext;
+			$remarks		=	$browser->find("//*[@id='item']/table[2]/tbody/tr[6]/td[2]",0)->plaintext;
       
       
       $record = array( 'rollno' =>$rollno, 
